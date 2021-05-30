@@ -1,5 +1,4 @@
 ////Parar o envio do formulário, capturar evento de submit do formulário.////
-
 const form = document.querySelector('#formulario');
 
 form.addEventListener('submit', function (e) {
@@ -34,7 +33,6 @@ function getImc (peso, altura) {
     const imc = peso / altura ** 2;
     return imc.toFixed(2);
 }
-
 
 function getNivelImc (imc) {
     const nivel = ['Abaixo do peso','Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
@@ -86,5 +84,5 @@ function setResultado (msg, isValid) {
     }
     
     p.innerHTML = msg;
-    resultado.appendChild(p)
+    resultado.appendChild(p) //Inserir elemento p
 };
