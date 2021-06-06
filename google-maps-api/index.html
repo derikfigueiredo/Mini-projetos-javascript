@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Google Map</title>
+    
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   <h1>Google Maps API</h1>
+
+   <div id="map"></div>
+
+    <iframe
+    width="600"
+    height="450"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBlJD_nhZPcac5OoIqjJke37EMwSvpnl0g&q=Space+Needle,Seattle+WA">
+    </iframe>
+
+<!-- 
+   <script>
+      function initMap() {
+            var options = {
+                zoom: 8,
+                center: {lat:42.3601,ing:-71.0589}
+            }
+       }
+
+       let map = new google.maps.Map(document.getElementById('map'), options);
+   </script>
+
+  <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlJD_nhZPcac5OoIqjJke37EMwSvpnl0g&callback=initMap">
+    </script> 
+-->
+
+</body>
+</html>
