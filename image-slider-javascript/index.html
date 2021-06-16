@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="img-slider">
+        <div class="slide active">
+            <img src="assets/images/pic1.png" alt="">
+            <div class="info">
+            <h2>Slide 01</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/pic2.png" alt="">
+            <div class="info">
+            <h2>Slide 02</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/pic3.png" alt="">
+            <div class="info">
+            <h2>Slide 03</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+    <script>
+         let slides = document.querySelectorAll('.slide');
+         let btns = document.querySelectorAll('.btn');
+         let currentSlide = 1;
+
+        
+     function manualNav(manual) {
+            slides.forEach((slide)=>{
+                slide.classList.remove('active');
+
+                btns.forEach((btn)=>{
+                btn.classList.remove('active');
+            })
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+            })
+         }
+
+         btns.forEach((btn, i)=>{
+            btn.addEventListener('click', ()=>{
+                manualNav(i);
+                currentSlide = i;
+            })
+         })
+       
+
+    </script>
+</body>
+</html>
